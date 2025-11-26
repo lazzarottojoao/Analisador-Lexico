@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador Léxico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Analisador Léxico</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="entradaToken" placeholder="Digite um token"
+                    autocomplete="off">
+                <button id="botaoAdicionarToken" onclick="adicionarToken()">Adicionar Token</button>
+            </div>
+
+            <div class="info">
+                <div class="info-item">
+                    <span class="info-label">Token Atual:</span>
+                    <span class="info-value" id="tokenAtual">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Estado:</span>
+                    <span class="info-value" id="estadoAtual">q0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Símbolos Lidos:</span>
+                    <span class="info-value" id="contagemSimbolos">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="automaton-section">
+            <h3 style=" margin-bottom: 15px;">Visualização do Autômato</h3>
+            <div id="exibicaoAutomato" class="automaton-container"></div>
+        </div>
+
+        <div id="status" class="status" style="display: none;"></div>
+
+        <div class="tokens-list">
+            <h3>Tokens Adicionados</h3>
+            <div id="listaTokens"></div>
+        </div>
+
+        <div class="search-section">
+            <h3>Buscar Token</h3>
+            <div class="search-input-group">
+                <input type="text" id="entradaBusca" placeholder="Digite um token para verificar se é aceito"
+                    autocomplete="off">
+            </div>
+            <div id="statusBusca" class="status" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="config.js""></script>
+    <script src="automato.js"></script>
+    <script src="marcadores.js"></script>
+    <script src="validacao.js"></script>
+    <script src="processamento.js"></script>
+    <script src="tokens.js"></script>
+    <script src="busca.js"></script>
+    <script src="eventos.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
