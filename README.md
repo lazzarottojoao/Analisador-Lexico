@@ -8,8 +8,6 @@
 
 Projeto desenvolvido para a disciplina de **Linguagens Formais**.
 
-Implementa um analisador léxico visual que valida tokens compostos por letras minúsculas através de um autômato finito determinístico (AFD).
-
 ---
 
 ## Funcionalidades
